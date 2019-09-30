@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public float noteSpeed;
 
+    public enum judges { NONE = 0, BAD, GOOD, PERFACT, MISS};
+
     // Start is called before the first frame update
     void Start()
     {
