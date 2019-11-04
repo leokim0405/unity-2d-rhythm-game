@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc11cdf002b6664b8df254f1a91e89f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteSpeed: 0.05
+  noteSpeed: 0.1
   scoreUI: {fileID: 1723575650}
   comboUI: {fileID: 1627769706}
   judgeUI: {fileID: 940110237}
