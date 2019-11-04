@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public float noteSpeed;
 
     public GameObject scoreUI;
-    private float score;
+    public float score;
     private Text scoreText;
 
     public GameObject comboUI;
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     private Sprite[] judgeSprites;
     private Image judgementSpriteRenderer;
     private Animator judgementSpriteAnimator;
+    public int maxCombo;
 
     public GameObject[] trails;
     private SpriteRenderer[] trailSpriteRenderers;
@@ -99,6 +100,10 @@ public class GameManager : MonoBehaviour
         {
             comboText.text = "COMBO" + combo.ToString();
             comboAnimator.SetTrigger("Show");
+        }
+        if(maxCombo < combo)
+        {
+            maxCombo = combo;
         }
     }
 
