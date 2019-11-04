@@ -32,9 +32,21 @@ public class GameManager : MonoBehaviour
     public GameObject[] trails;
     private SpriteRenderer[] trailSpriteRenderers;
 
+    private AudioSource audioSource;
+    private string music = "Drops of H20";
+
+    void MusicStart()
+    {
+        AudioClip audioClip = Resources.Load<AudioClip>("Beats/" + music);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.Play();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        Invoke("MusicStart", 2);
         judgementSpriteRenderer = judgeUI.GetComponent<Image>();
         judgementSpriteAnimator = judgeUI.GetComponent<Animator>();
         scoreText = scoreUI.GetComponent<Text>();
@@ -45,7 +57,7 @@ public class GameManager : MonoBehaviour
         judgeSprites[0] = Resources.Load<Sprite>("Sprites/Bad");
         judgeSprites[1] = Resources.Load<Sprite>("Sprites/Good");
         judgeSprites[2] = Resources.Load<Sprite>("Sprites/Miss");
-        judgeSprites[3] = Resources.Load<Sprite>("Sprites/Perfact");
+        judgeSprites[3] = Resources.Load<Sprite>("Sprites/Perfect");
 
         trailSpriteRenderers = new SpriteRenderer[trails.Length];
         for(int i = 0; i < trails.Length; i++)
