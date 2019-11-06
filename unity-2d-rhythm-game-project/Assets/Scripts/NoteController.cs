@@ -57,7 +57,7 @@ public class NoteController : MonoBehaviour
     {
         noteObjectPooler = gameObject.GetComponent<ObjectPooler>();
 
-        TextAsset textAsset = Resources.Load<TextAsset>("Beats/" + GameManager.instance.music);
+        TextAsset textAsset = Resources.Load<TextAsset>("Beats/" + PlayerInformation.selectMusic);
         StringReader reader = new StringReader(textAsset.text);
         musicTitle = reader.ReadLine();
         musicArtist = reader.ReadLine();
@@ -87,13 +87,17 @@ public class NoteController : MonoBehaviour
 
     IEnumerator AwaitGameResult(int order)
     {
-        yield return new WaitForSeconds(startingPoint + order * beatInterval);
+        yield return new WaitForSeconds(startingPoint + order * beatInterval + 8.0f);
         GameResult();
     }
 
     void GameResult()
     {
-        SceneManager.LoadScene("GameResultScene");
+        PlayerInformation.maxCombo = GameManager.instance.maxCombo;
+        PlayerInformation.score = GameManager.instance.score;
+        PlayerInformation.musicTitle = musicTitle;
+        PlayerInformation.musicArtist = musicArtist;
+        SceneManager.LoadScene("GameResult");
     }
 
     // Update is called once per frame

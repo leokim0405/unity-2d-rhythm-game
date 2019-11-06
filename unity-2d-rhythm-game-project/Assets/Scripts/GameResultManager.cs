@@ -12,7 +12,7 @@ public class GameResultManager : MonoBehaviour
     void Start()
     {
         musicTitleUI.text = PlayerInformation.musicTitle;
-        scoreUI.text = ""+PlayerInformation.score;
+        scoreUI.text = "" + PlayerInformation.score;
         maxComboUI.text = "" + PlayerInformation.maxCombo;
     }
 
