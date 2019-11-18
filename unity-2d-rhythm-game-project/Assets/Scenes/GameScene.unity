@@ -575,7 +575,6 @@ MonoBehaviour:
   - {fileID: 172445699}
   - {fileID: 926788183}
   - {fileID: 1159705841}
-  music: 2
   autoPerfect: 0
 --- !u!4 &523834785
 Transform:
