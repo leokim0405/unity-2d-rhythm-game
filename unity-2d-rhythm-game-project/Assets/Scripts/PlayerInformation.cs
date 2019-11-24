@@ -9,4 +9,5 @@ public static class PlayerInformation
     public static string selectMusic { get; set;}
     public static string musicTitle { get; set; }
     public static string musicArtist { get; set; }
+    public static Firebase.Auth.FirebaseAuth auth;
 }
