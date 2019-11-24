@@ -290,10 +290,10 @@
  <HintPath>C:/unity-rhythm-game/unity-2d-rhythm-game/unity-2d-rhythm-game-project/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Compat">
- <HintPath>C:/unity-rhythm-game/unity-2d-rhythm-game/unity-2d-rhythm-game-project/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
+ <HintPath>C:/unity-rhythm-game/unity-2d-rhythm-game/unity-2d-rhythm-game-project/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Tasks">
- <HintPath>C:/unity-rhythm-game/unity-2d-rhythm-game/unity-2d-rhythm-game-project/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
+ <HintPath>C:/unity-rhythm-game/unity-2d-rhythm-game/unity-2d-rhythm-game-project/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>C:/unity-rhythm-game/unity-2d-rhythm-game/unity-2d-rhythm-game-project/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
