@@ -14,6 +14,9 @@ public class SongSelectManager : MonoBehaviour
     private int musicIndex;
     private int musicCount = 3;
 
+    public Text userUI;
+
+
     private void UpdateSong(int musicIndex)
     {
         AudioSource audioSource = GetComponent<AudioSource>();
@@ -45,6 +48,7 @@ public class SongSelectManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        userUI.text = PlayerInformation.auth.CurrentUser.Email + " 님 환영합니다.";
         musicIndex = 1;
         UpdateSong(musicIndex);
     }
@@ -54,6 +58,14 @@ public class SongSelectManager : MonoBehaviour
         PlayerInformation.selectMusic = musicIndex.ToString();
         SceneManager.LoadScene("GameScene");
     }
+
+    public void LogOut()
+    {
+        PlayerInformation.auth.SignOut();
+        SceneManager.LoadScene("LoginScene");
+    }
+
+
     // Update is called once per frame
     void Update()
     {

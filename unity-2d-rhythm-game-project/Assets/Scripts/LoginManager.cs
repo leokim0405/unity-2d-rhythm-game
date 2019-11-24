@@ -32,10 +32,12 @@ public class LoginManager : MonoBehaviour
                 if (task.IsCompleted && !task.IsCanceled && !task.IsFaulted)
                 {
                     PlayerInformation.auth = auth;
+                    Debug.Log("Login success");
                     SceneManager.LoadScene("SongSelectScene");
                 }
                 else
                 {
+                    Debug.Log("Login failed");
                     messageUI.text = "계정을 다시 확인해 주세요";
                 }
             }
